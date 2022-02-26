@@ -14,6 +14,19 @@ const transpose = function(matrix) {
   return transposedMatrix;
 };
 
+const mirrorMatrix = (matrix) => {
+  const resultMatrix = [];
+  // For each array we are reverting the elements
+  for (let i = 0; i < matrix.length; i++) {
+    resultMatrix.push([]);
+    for (let j = matrix[i].length - 1; j >= 0; j--) {
+      resultMatrix[i].push(matrix[i][j]);
+    }
+  }
+  return resultMatrix;
+};
+
+
 // Do not edit this function.
 const printMatrix = (matrix) => {
     for (const row of matrix) {
@@ -45,4 +58,14 @@ const printMatrix = (matrix) => {
 //   [1, 2, 3, 4, 5, 6, 7]
 // ]));
 
-module.exports = { transpose };
+
+// printMatrix(mirrorMatrix([
+//     [1, 2, 3, 4],  
+//     [1, 2, 3, 4],
+//     [1, 2, 3, 4],
+//     [1, 2, 3, 4]
+// ]));
+  
+// console.log('----')
+
+module.exports = { transpose, mirrorMatrix };
