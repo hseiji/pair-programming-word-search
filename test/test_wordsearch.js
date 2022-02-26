@@ -1,4 +1,5 @@
 const chai = require('chai');
+const { transpose, printMatrix } = require('../there-is-no-spoon');
 const assert = chai.assert;
 
 const wordSearch = require('../wordsearch.js')
